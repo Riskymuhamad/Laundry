@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Informasi Laundry - Risky Muhamad</title>
+    <style>
+      @font-face {
+        font-family: Roboto;
+        src: url(/fonts/Roboto-Regular.ttf);
+      }
+
+      html,
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Roboto";
+        background-color: #e5e5e5;
+      }
+
+      /* Header */
+
+      header {
+        display: flex;
+        justify-content: center;
+      }
+
+      header section {
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        margin-top: 25px;
+        background-color: white;
+        height: auto;
+        padding: 20px;
+        width: 1000px;
+        max-width: 1200px;
+      }
+
+      header section h1 {
+        color: #000000;
+        font-size: 36px;
+        margin: 25px 0px 0px 0px;
+      }
+
+      .creator {
+        display: flex;
+        font-size: 18px;
+        color: #000000;
+      }
+
+      .nama {
+        margin-right: 40px;
+      }
+
+      /* Isi Konten */
+
+      main section {
+        display: flex;
+        justify-content: center;
+      }
+
+      main section container {
+        border-radius: 5px;
+        margin-top: 25px;
+        background-color: white;
+        height: auto;
+        padding: 20px;
+        width: 1000px;
+        max-width: 1200px;
+      }
+
+      main section container h2 {
+        margin-top: 0px;
+      }
+
+      main section container article {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .dashboard-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 173px;
+        height: auto;
+        border-radius: 5px;
+        text-align: center;
+        color: #ffff;
+      }
+
+      .dashboard-card h1 {
+        font-size: 25px;
+        margin-bottom: 0px;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      table tr th {
+        text-align: left;
+        padding: 4px;
+        background-color: #a2d2ff;
+      }
+      table tr td {
+        padding: 4px;
+      }
+
+      #selesai {
+        background-color: #3db2ff;
+        color: white;
+        padding: 0px 10px 0px 10px;
+        border-radius: 2px;
+      }
+
+      #proses {
+        background-color: #ff9300;
+        color: white;
+        padding: 0px 10px 0px 10px;
+        border-radius: 2px;
+      }
+
+      /* Footer */
+
+      footer {
+        display: flex;
+        justify-content: center;
+      }
+
+      footer section {
+        border-radius: 5px;
+        margin-top: 25px;
+        background-color: white;
+        height: auto;
+        padding: 0px 20px 0px 20px;
+        width: 1000px;
+        max-width: 1200px;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <section>
+        <img src="/images/logo.png" width="180px" height="127px" />
+        <div class="header-text">
+          <h1>Sistem Informasi Laundry</h1>
+          <div class="creator">
+            <p class="nama">Nama : Risky Muhamad</p>
+            <p>NPM : 201943502061</p>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section>
+        <container>
+          <h2 style="margin-top: 0px">Dashboard</h2>
+          <article>
+            <div class="dashboard-card" style="background-color: #3db2ff">
+              <h1>10</h1>
+              <p>Pelanggan</p>
+            </div>
+
+            <div class="dashboard-card" style="background-color: #ffb830">
+              <h1>5</h1>
+              <p>Cucian Diproses</p>
+            </div>
+
+            <div class="dashboard-card" style="background-color: #ffbf86">
+              <h1>2</h1>
+              <p>Cucian Siap Ambil</p>
+            </div>
+
+            <div class="dashboard-card" style="background-color: #50cb93">
+              <h1>3</h1>
+              <p>Cucian Selesai</p>
+            </div>
+          </article>
+        </container>
+      </section>
+
+      <section>
+        <container>
+          <h2>Riwayat Transaksi Terakhir</h2>
+          <article>
+            <table border="1" width="100%">
+              <tr>
+                <th>No</th>
+                <th>Invoice</th>
+                <th>Tgl. Masuk</th>
+                <th>Pelanggan</th>
+                <th>Berat (Kg)</th>
+                <th>Tgl. Selesai</th>
+                <th>Harga</th>
+                <th>Status</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Invoice-10</td>
+                <td>30-10-2021</td>
+                <td>Dellia Putri</td>
+                <td>5</td>
+                <td>01-11-2021</td>
+                <td>Rp. 50.000</td>
+                <td><span id="proses">Proses</span></td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Invoice-9</td>
+                <td>29-10-2021</td>
+                <td>Hashifah</td>
+                <td>2</td>
+                <td>31-10-2021</td>
+                <td>Rp. 20.000</td>
+                <td><span id="proses">Proses</span></td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Invoice-8</td>
+                <td>28-10-2021</td>
+                <td>Zazkia</td>
+                <td>3</td>
+                <td>28-10-2021</td>
+                <td>Rp. 30.000</td>
+                <td><span id="proses">Proses</span></td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>Invoice-7</td>
+                <td>25-10-2021</td>
+                <td>Sonia</td>
+                <td>7</td>
+                <td>28-10-2021</td>
+                <td>Rp. 70.000</td>
+                <td><span id="selesai">Selesai</span></td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Invoice-6</td>
+                <td>25-10-2021</td>
+                <td>Devi</td>
+                <td>8</td>
+                <td>28-10-2021</td>
+                <td>Rp. 80.000</td>
+                <td><span id="selesai">Selesai</span></td>
+              </tr>
+            </table>
+          </article>
+        </container>
+      </section>
+    </main>
+
+    <footer>
+      <section>
+        <p>Risky Muhamad - 2021</p>
+      </section>
+    </footer>
+  </body>
+</html>
